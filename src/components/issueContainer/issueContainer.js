@@ -1,8 +1,8 @@
 import React, { Component } from "react";
-import Issue from "./issue.js";
+import Issue from "./../issue/issue.js";
 import "./issueContainer.css";
-import { Link } from "react-router-dom"
-import axios from 'axios';
+
+// import axios from 'axios';
 
 class issueContainer extends Component {
   state = {
