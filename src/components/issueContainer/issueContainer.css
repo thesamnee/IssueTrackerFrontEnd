@@ -1,0 +1,128 @@
+.Work{
+    background-color: #70FF86;
+    box-shadow: inset 3px 3px 10px rgba(0, 0, 0, 0.5), inset -3px -3px 10px rgba(0, 0, 0, 0.192);
+    padding: 2vh;
+    border-radius: 20px;
+    margin: .2vw;
+    color: white;
+}
+.Fun{
+    background-color: #FF70E9;
+    box-shadow: inset 3px 3px 10px rgba(0, 0, 0, 0.5), inset -3px -3px 10px rgba(0, 0, 0, 0.192);
+    padding: 2vh;
+    border-radius: 20px;
+    margin: .2vw;
+    color: white;
+}
+.Chores{
+    background-color: #80B5FF;
+    box-shadow: inset 3px 3px 10px rgba(0, 0, 0, 0.5), inset -3px -3px 10px rgba(0, 0, 0, 0.192);
+    padding: 2vh;
+    border-radius: 20px;
+    margin: .2vw;
+    color: white;
+}
+.Family{
+    background-color: #FFCA80;
+    box-shadow: inset 3px 3px 10px rgba(0, 0, 0, 0.5), inset -3px -3px 10px rgba(0, 0, 0, 0.192);
+    padding: 2vh;
+    border-radius: 20px;
+    margin: .2vw;
+    color: white;
+}
+.Sleep{
+    background-color: #FF7A7A;
+    box-shadow: inset 3px 3px 10px rgba(0, 0, 0, 0.5), inset -3px -3px 10px rgba(0, 0, 0, 0.192);
+    padding: 2vh;
+    border-radius: 20px;
+    margin: .2vw;
+    color: white;
+}
+.dayHeader{
+    color: white;
+    margin-bottom: 3vh;
+    border-bottom: solid 1px rgb(255, 255, 255);
+    width: 80%;
+    position: relative;
+    margin-right: auto;
+    margin-left: auto;
+}
+.schedDay{
+    border-right: solid 2px rgb(29, 31, 39);
+    ;
+    height: 87vh;
+    /* top: 10vh; */
+    position: relative;
+    display: table-cell;
+    text-align: center;
+    background-image: linear-gradient(rgb(34, 35, 39),rgb(56, 55, 63));
+
+}
+.schedContainer{
+    display: table;
+    width: 100%;
+    table-layout: fixed; 
+}
+.addPlan{
+    position: absolute;
+    width: 8vh;
+    height: 8vh;
+    background-image: radial-gradient(rgb(56, 55, 63), rgb(34, 35, 39));
+    box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.726), -3px -3px 20px rgba(102, 181, 255, 0.74);
+    font-size: 5vh;
+    color: white;
+    border-radius: 100%;
+    text-align: center;
+    bottom: 5vh;
+    right: 5vh;
+    transition: width 1s, height 1s;
+
+}
+.addPlan:hover{
+    transition: width 1s, height 1s;
+    width: 10vh;
+    height: 10vh;
+}
+.cardBody{
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+    background-image: radial-gradient(rgb(56, 55, 63), rgb(34, 35, 39));
+    color: white;
+    width: 80vw;
+    border-radius: 30px;
+    line-height: 5vh;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 40vh;
+}
+.insetBox{
+    box-shadow: inset 3px 3px 20px rgb(0, 0, 0), inset -3px -3px 20px rgba(98, 171, 180, 0.267);
+    width: 85vw;
+    border-radius: 30px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 50vh;
+}
+
+.deleteBtn{
+    background-color: none;
+    color: red;
+    border: solid 2px red;
+    border-radius: 10px;
+    background-image: radial-gradient(rgb(56, 55, 63), rgb(34, 35, 39));
+}
+.header, .description, .time{
+    text-align: center;
+    margin: 3vh;
+}
+.description{
+    font-size: 3vh;
+}
+.deleteBtn{
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
