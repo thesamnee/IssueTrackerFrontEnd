@@ -1,44 +1,4 @@
-.Work{
-    background-color: #70FF86;
-    box-shadow: inset 3px 3px 10px rgba(0, 0, 0, 0.5), inset -3px -3px 10px rgba(0, 0, 0, 0.192);
-    padding: 2vh;
-    border-radius: 20px;
-    margin: .2vw;
-    color: white;
-}
-.Fun{
-    background-color: #FF70E9;
-    box-shadow: inset 3px 3px 10px rgba(0, 0, 0, 0.5), inset -3px -3px 10px rgba(0, 0, 0, 0.192);
-    padding: 2vh;
-    border-radius: 20px;
-    margin: .2vw;
-    color: white;
-}
-.Chores{
-    background-color: #80B5FF;
-    box-shadow: inset 3px 3px 10px rgba(0, 0, 0, 0.5), inset -3px -3px 10px rgba(0, 0, 0, 0.192);
-    padding: 2vh;
-    border-radius: 20px;
-    margin: .2vw;
-    color: white;
-}
-.Family{
-    background-color: #FFCA80;
-    box-shadow: inset 3px 3px 10px rgba(0, 0, 0, 0.5), inset -3px -3px 10px rgba(0, 0, 0, 0.192);
-    padding: 2vh;
-    border-radius: 20px;
-    margin: .2vw;
-    color: white;
-}
-.Sleep{
-    background-color: #FF7A7A;
-    box-shadow: inset 3px 3px 10px rgba(0, 0, 0, 0.5), inset -3px -3px 10px rgba(0, 0, 0, 0.192);
-    padding: 2vh;
-    border-radius: 20px;
-    margin: .2vw;
-    color: white;
-}
-.dayHeader{
+.statusHeader{
     color: white;
     margin-bottom: 3vh;
     border-bottom: solid 1px rgb(255, 255, 255);
@@ -47,7 +7,7 @@
     margin-right: auto;
     margin-left: auto;
 }
-.schedDay{
+.issueStatus{
     border-right: solid 2px rgb(29, 31, 39);
     ;
     height: 87vh;
@@ -58,12 +18,12 @@
     background-image: linear-gradient(rgb(34, 35, 39),rgb(56, 55, 63));
 
 }
-.schedContainer{
+.issueContainer{
     display: table;
     width: 100%;
     table-layout: fixed; 
 }
-.addPlan{
+.addIssue{
     position: absolute;
     width: 8vh;
     height: 8vh;
@@ -78,7 +38,7 @@
     transition: width 1s, height 1s;
 
 }
-.addPlan:hover{
+.addIssue:hover{
     transition: width 1s, height 1s;
     width: 10vh;
     height: 10vh;

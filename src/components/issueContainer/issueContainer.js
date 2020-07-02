@@ -15,7 +15,7 @@ class issueContainer extends Component {
 
   render() {
     return (
-      <div className="issueSontainer">
+      <div className="issueContainer">
         <div className="issueStatus" status="new">
           <h2 className="statusHeader">New</h2>
           {this.state.issues
