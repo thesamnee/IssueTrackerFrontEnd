@@ -1,3 +1,11 @@
+.issue{
+    box-shadow: inset 3px 3px 10px rgba(0, 0, 0, 0.5), inset -3px -3px 10px rgba(0, 0, 0, 0.192);
+    padding: 2vh;
+    border-radius: 20px;
+    margin: .2vw;
+    color: white;
+}
+
 .statusHeader{
     color: white;
     margin-bottom: 3vh;

@@ -6,7 +6,13 @@ import "./issueContainer.css";
 
 class issueContainer extends Component {
   state = {
-    issues: []
+    issues: [
+      {
+        "title":"placeholder issue",
+        "desc":"this is placeholder",
+        "status":"new"
+      }
+    ]
   };
   
   componentDidMount(){

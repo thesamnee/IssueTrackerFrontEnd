@@ -3,7 +3,7 @@ import React from "react";
 const Issue = ({ title, desc, status }) => {
 
   return (
-    <div
+    <div className="issue"
       data-status={status}
       >
       <p className="issue-title">{title}</p>
