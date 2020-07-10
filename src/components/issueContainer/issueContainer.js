@@ -18,7 +18,7 @@ class issueContainer extends Component {
   componentDidMount(){
     //Add Axios call to get issues from API
   }
-
+  
   render() {
     return (
       <div className="issueContainer">
