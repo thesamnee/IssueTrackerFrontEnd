@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import axios from "axios";
 import { Link } from 'react-router-dom';
+import './newIssue.css';
 
 
 class NewIssue extends Component {
@@ -64,6 +65,7 @@ class NewIssue extends Component {
                     value={this.state.title}
                     onChange={this.onChangeIssueTitle}
                 />
+                <br/>
                 <label className="formLabel">Desc: </label>
                 <input
                     type="text"
@@ -71,10 +73,12 @@ class NewIssue extends Component {
                     value={this.state.desc}
                     onChange={this.onChangeIssueDesc}
                 />
+                <br/>
                 <label className="formLabel">Status: </label>
                 <select
                     value={this.state.day}
                     onChange={this.onChangeIssueStatus}
+                    className="form-control"
                 >
                     <option selected>Please select an option</option>
                     <option value="new">New</option>
@@ -82,6 +86,7 @@ class NewIssue extends Component {
                     <option value="complete">Complete</option>
                     <option value="noAction">No Action Required</option>
                 </select>
+                <br/>
                 <button type="submit" className="submitBtn" onClick={this.onSubmit}>
                     <Link to="/">
                         Create Issue
