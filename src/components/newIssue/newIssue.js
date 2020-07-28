@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import axios from "axios";
+import {Link} from 'react-router-dom';
 
 
 class NewIssue extends Component {
@@ -33,14 +34,14 @@ class NewIssue extends Component {
         console.log(`Description: ${this.state.desc}`);
         console.log(`Status: ${this.state.status}`);
 
-        const newTodo = {
+        const newIssue = {
             title: this.state.title,
             desc: this.state.desc,
             status: this.state.status
         };
 
         axios
-          .post("http://localhost:4000/todos/add", newTodo)
+          .post("http://localhost:4000/issues/add", newIssue)
           .then(res => {
             this.setState({
               title: "",
@@ -81,7 +82,11 @@ class NewIssue extends Component {
                   <option value="complete">Complete</option>
                   <option value="noAction">No Action Required</option>
                 </select>
-                <button type="submit" className="submitBtn" onClick={this.onSubmit}>Create Issue</button>
+                    <button type="submit" className="submitBtn" onClick={this.onSubmit}>
+                <Link to="/">
+                        Create Issue
+                </Link>
+                        </button>
             </div>
 
         )

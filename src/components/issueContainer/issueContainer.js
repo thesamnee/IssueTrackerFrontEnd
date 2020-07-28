@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 import Issue from "./../issue/issue.js";
+import axios from "axios";
+import { Link } from 'react-router-dom'
 import "./issueContainer.css";
 
 // import axios from 'axios';
@@ -21,7 +23,13 @@ class issueContainer extends Component {
   };
   
   componentDidMount(){
-    //Add Axios call to get issues from API
+    axios.get("http://localhost:4000/issues")
+    .then(res => {
+      console.log(res)
+      this.setState({
+        issues: res.data
+      })
+    })
   }
   
   render() {
@@ -75,6 +83,7 @@ class issueContainer extends Component {
                 />
                 ))}
         </div>
+        <Link to="/newissue"><button className="newIssueBtn">+</button></Link>
         </div>
     );
   }
