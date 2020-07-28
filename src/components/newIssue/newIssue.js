@@ -9,42 +9,37 @@ class NewIssue extends Component {
 
     onChangeIssueTitle = e => {
         this.setState({
-          title: e.target.value
-        });
-        console.log(this.state.title)
-      };
-    onChangeIssueDesc = e => {
-        this.setState({
             title: e.target.value
         });
-        console.log(this.state.desc)
+    };
+    onChangeIssueDesc = e => {
+        this.setState({
+            desc: e.target.value
+        });
     };
     onChangeIssueStatus = e => {
         this.setState({
             status: e.target.value
         });
-        console.log(this.state.desc)
     };
 
     onSubmit = e => {
         e.preventDefault();
-    
+
         console.log(`Submitted`);
         console.log(`Title: ${this.state.title}`);
-        console.log(`Category: ${this.state.category}`);
-        console.log(`Description: ${this.state.description}`);
-        console.log(`Time: ${this.state.time}`);
-        console.log(`Duration: ${this.state.duration}`);
-    
+        console.log(`Description: ${this.state.desc}`);
+        console.log(`Status: ${this.state.status}`);
+
         const newTodo = {
-          day: this.state.day,
-          title: this.state.title,
-          category: this.state.category,
-          duration: this.state.duration,
-          description: this.state.description,
-          time: this.state.time
+            day: this.state.day,
+            title: this.state.title,
+            category: this.state.category,
+            duration: this.state.duration,
+            description: this.state.description,
+            time: this.state.time
         };
-    
+
         // axios
         //   .post("http://localhost:4000/todos/add", newTodo)
         //   .then(res => {
@@ -58,20 +53,39 @@ class NewIssue extends Component {
         //     });
         //     this.props.history.push("/schedule")
         //   });
-    
-        
-      };
+
+
+    };
 
     render() {
         return (
             <div className="formBox">
-                <label className="header">Title: </label>
+                <label className="formLabel">Title: </label>
                 <input
                     type="text"
                     className="form-control"
                     value={this.state.title}
                     onChange={this.onChangeIssueTitle}
                 />
+                <label className="formLabel">Desc: </label>
+                <input
+                    type="text"
+                    className="form-control"
+                    value={this.state.desc}
+                    onChange={this.onChangeIssueDesc}
+                />
+                <label className="formLabel">Status: </label>
+                <select
+                  value={this.state.day}
+                  onChange={this.onChangeIssueStatus}
+                >
+                  <option selected>Please select an option</option>
+                  <option value="new">New</option>
+                  <option value="inProgress">In Progress</option>
+                  <option value="complete">Complete</option>
+                  <option value="noAction">No Action Required</option>
+                </select>
+                <button type="submit" className="submitBtn" onClick={this.onSubmit}></button>
             </div>
 
         )
