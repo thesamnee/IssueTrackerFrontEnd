@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-class newIssue extends Component {
+class NewIssue extends Component {
     state = {
         title: "",
         desc: "",
@@ -45,19 +45,19 @@ class newIssue extends Component {
           time: this.state.time
         };
     
-        axios
-          .post("http://localhost:4000/todos/add", newTodo)
-          .then(res => {
-            this.setState({
-              day: "",
-              title: "",
-              category: "",
-              description: "",
-              time: Number,
-              duration: Number
-            });
-            this.props.history.push("/schedule")
-          });
+        // axios
+        //   .post("http://localhost:4000/todos/add", newTodo)
+        //   .then(res => {
+        //     this.setState({
+        //       day: "",
+        //       title: "",
+        //       category: "",
+        //       description: "",
+        //       time: Number,
+        //       duration: Number
+        //     });
+        //     this.props.history.push("/schedule")
+        //   });
     
         
       };
@@ -78,3 +78,4 @@ class newIssue extends Component {
     }
 
 }
+export default NewIssue;
