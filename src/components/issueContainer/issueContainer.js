@@ -11,6 +11,11 @@ class issueContainer extends Component {
         "title":"placeholder issue",
         "desc":"this is placeholder",
         "status":"new"
+      },
+      {
+        "title":"placeholder issue 2",
+        "desc":"this is also a placeholder",
+        "status":"complete"
       }
     ]
   };
