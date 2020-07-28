@@ -1,13 +1,17 @@
+body{
+    background: rgb(34, 35, 39);
+}
 .formBox{
     width: 80vh;
     height: 80vh;
     position: relative;
     margin-left: auto;
     margin-right: auto;
-    border: 2px solid black;
     border-radius: 30px;
     font-size: 4vh;
+    color: white;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5), -3px -3px 10px rgba(255, 255, 255, 0.192);
 }
 .formLabel{
     margin: 2vh;
@@ -15,6 +19,8 @@
 .form-control{
     margin-top: 10vh;
     text-align: center;
+    background: rgba(255, 255, 255, 0.425);
+    color: white;
 }
 .submitBtn{
     margin-top: 10vh;
@@ -22,7 +28,14 @@
     height: 6vh;
     font-size: inherit;
     font-family: inherit;
+    text-decoration: none;
+    background: none;
+    border: none;
+    color: white;
+    border-radius: 10px;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5), -3px -3px 10px rgba(255, 255, 255, 0.192);
 }
+
 input, select{
     width: 50vh;
     height: 5vh;
