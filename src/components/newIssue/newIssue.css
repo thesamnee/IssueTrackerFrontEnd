@@ -35,11 +35,17 @@ body{
     border-radius: 10px;
     box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5), -3px -3px 10px rgba(255, 255, 255, 0.192);
 }
+.submitBtn:checked{
+    text-emphasis: none;
+    text-decoration: none;
+    color: white;
+}
 
-input, select{
+input, select, option{
     width: 50vh;
     height: 5vh;
     font-size: inherit;
     font-family: inherit;
     border-radius: 10px;
+    background-color: rgb(87, 87, 87);
 }
