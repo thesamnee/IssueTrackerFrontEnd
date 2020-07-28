@@ -10,28 +10,28 @@ class issueContainer extends Component {
   state = {
     issues: [
       {
-        "title":"placeholder issue",
-        "desc":"this is placeholder",
-        "status":"new"
+        "title": "placeholder issue",
+        "desc": "this is placeholder",
+        "status": "new"
       },
       {
-        "title":"placeholder issue 2",
-        "desc":"this is also a placeholder",
-        "status":"complete"
+        "title": "placeholder issue 2",
+        "desc": "this is also a placeholder",
+        "status": "complete"
       }
     ]
   };
-  
-  componentDidMount(){
+
+  componentDidMount() {
     axios.get("http://localhost:4000/issues")
-    .then(res => {
-      console.log(res)
-      this.setState({
-        issues: res.data
+      .then(res => {
+        console.log(res)
+        this.setState({
+          issues: res.data
+        })
       })
-    })
   }
-  
+
   render() {
     return (
       <div className="issueContainer">
@@ -43,7 +43,7 @@ class issueContainer extends Component {
               <Issue
                 status={issues.status}
                 title={issues.title}
-                desc={issues.desc}  
+                desc={issues.desc}
               />
             ))}
         </div>
@@ -53,11 +53,11 @@ class issueContainer extends Component {
             .filter(issues => issues.status === "inProgress")
             .map(issues => (
               <Issue
-              status={issues.status}
-              title={issues.title}
-              desc={issues.desc}
+                status={issues.status}
+                title={issues.title}
+                desc={issues.desc}
               />
-              ))}
+            ))}
         </div>
         <div className="issueStatus" status="complete">
           <h2 className="statusHeader">Complete</h2>
@@ -68,8 +68,8 @@ class issueContainer extends Component {
                 status={issues.status}
                 title={issues.title}
                 desc={issues.desc}
-                />
-                ))}
+              />
+            ))}
         </div>
         <div className="issueStatus" status="noAction">
           <h2 className="statusHeader">No Action Needed</h2>
@@ -77,14 +77,18 @@ class issueContainer extends Component {
             .filter(issues => issues.status === "noAction")
             .map(issues => (
               <Issue
-              status={issues.status}
-              title={issues.title}
-              desc={issues.desc}
-                />
-                ))}
+                status={issues.status}
+                title={issues.title}
+                desc={issues.desc}
+              />
+            ))}
+          <Link to="/newissue">
+            <button className="newIssueBtn">
+              +
+            </button>
+          </Link>
         </div>
-        <Link to="/newissue"><button className="newIssueBtn">+</button></Link>
-        </div>
+      </div>
     );
   }
 }

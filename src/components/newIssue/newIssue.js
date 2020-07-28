@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import axios from "axios";
-import {Link} from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 
 class NewIssue extends Component {
@@ -41,15 +41,15 @@ class NewIssue extends Component {
         };
 
         axios
-          .post("http://localhost:4000/issues/add", newIssue)
-          .then(res => {
-            this.setState({
-              title: "",
-              desc: "",
-              status: ""
+            .post("http://localhost:4000/issues/add", newIssue)
+            .then(res => {
+                this.setState({
+                    title: "",
+                    desc: "",
+                    status: ""
+                });
+                this.props.history.push("/")
             });
-            this.props.history.push("/")
-          });
 
 
     };
@@ -73,20 +73,20 @@ class NewIssue extends Component {
                 />
                 <label className="formLabel">Status: </label>
                 <select
-                  value={this.state.day}
-                  onChange={this.onChangeIssueStatus}
+                    value={this.state.day}
+                    onChange={this.onChangeIssueStatus}
                 >
-                  <option selected>Please select an option</option>
-                  <option value="new">New</option>
-                  <option value="inProgress">In Progress</option>
-                  <option value="complete">Complete</option>
-                  <option value="noAction">No Action Required</option>
+                    <option selected>Please select an option</option>
+                    <option value="new">New</option>
+                    <option value="inProgress">In Progress</option>
+                    <option value="complete">Complete</option>
+                    <option value="noAction">No Action Required</option>
                 </select>
-                    <button type="submit" className="submitBtn" onClick={this.onSubmit}>
-                <Link to="/">
+                <button type="submit" className="submitBtn" onClick={this.onSubmit}>
+                    <Link to="/">
                         Create Issue
-                </Link>
-                        </button>
+                    </Link>
+                </button>
             </div>
 
         )
