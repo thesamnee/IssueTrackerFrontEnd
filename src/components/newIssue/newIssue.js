@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import axios from "axios";
+
 
 class NewIssue extends Component {
     state = {
@@ -32,27 +34,21 @@ class NewIssue extends Component {
         console.log(`Status: ${this.state.status}`);
 
         const newTodo = {
-            day: this.state.day,
             title: this.state.title,
-            category: this.state.category,
-            duration: this.state.duration,
-            description: this.state.description,
-            time: this.state.time
+            desc: this.state.desc,
+            status: this.state.status
         };
 
-        // axios
-        //   .post("http://localhost:4000/todos/add", newTodo)
-        //   .then(res => {
-        //     this.setState({
-        //       day: "",
-        //       title: "",
-        //       category: "",
-        //       description: "",
-        //       time: Number,
-        //       duration: Number
-        //     });
-        //     this.props.history.push("/schedule")
-        //   });
+        axios
+          .post("http://localhost:4000/todos/add", newTodo)
+          .then(res => {
+            this.setState({
+              title: "",
+              desc: "",
+              status: ""
+            });
+            this.props.history.push("/")
+          });
 
 
     };
@@ -85,7 +81,7 @@ class NewIssue extends Component {
                   <option value="complete">Complete</option>
                   <option value="noAction">No Action Required</option>
                 </select>
-                <button type="submit" className="submitBtn" onClick={this.onSubmit}></button>
+                <button type="submit" className="submitBtn" onClick={this.onSubmit}>Create Issue</button>
             </div>
 
         )
